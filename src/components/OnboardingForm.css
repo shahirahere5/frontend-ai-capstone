@@ -1,0 +1,215 @@
+.onboarding {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 24px 64px;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 48px;
+  }
+}
+
+.onboarding__card {
+  width: min(100%, 560px);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+
+  @media (max-width: 1024px) {
+    padding: 24px 20px;
+  }
+}
+
+.onboarding__header {
+  margin-bottom: 28px;
+}
+
+.onboarding__eyebrow {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.onboarding__lead {
+  margin-top: 8px;
+  color: var(--text);
+}
+
+.onboarding h1 {
+  font-size: 36px;
+  margin: 0;
+  letter-spacing: -1px;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+}
+
+.onboarding__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.onboarding__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.onboarding__field label,
+.onboarding__fieldset legend {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.onboarding__field input[type='text'],
+.onboarding__field input[type='email'],
+.onboarding__field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.onboarding__field input:focus-visible,
+.onboarding__field select:focus-visible,
+.onboarding__submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.onboarding__field input[aria-invalid='true'],
+.onboarding__field select[aria-invalid='true'],
+.onboarding__fieldset[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.onboarding__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.onboarding__hint {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.onboarding__radio-group,
+.onboarding__checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.onboarding__radio,
+.onboarding__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--text-h);
+  background: var(--social-bg);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.onboarding__radio:has(input:checked),
+.onboarding__checkbox:has(input:checked) {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.onboarding__checkbox--inline {
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.onboarding__checkbox--inline span {
+  line-height: 1.4;
+}
+
+.onboarding__radio input,
+.onboarding__checkbox input {
+  accent-color: var(--accent);
+  margin: 0;
+}
+
+.onboarding__error {
+  margin: 0;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+.onboarding__submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.onboarding__submit:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.onboarding__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.onboarding--success .onboarding__summary {
+  margin: 24px 0 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.onboarding__summary div {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.onboarding__summary dt {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.onboarding__summary dd {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-h);
+}
