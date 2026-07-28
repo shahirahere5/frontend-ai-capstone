@@ -1,0 +1,125 @@
+.onboarding-form {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.onboarding-form__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: var(--text-h);
+}
+
+.onboarding-form__description {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.onboarding-form__field {
+  margin-bottom: 1.25rem;
+}
+
+.onboarding-form__field label,
+.onboarding-form__legend {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.onboarding-form__legend {
+  padding: 0;
+  border: none;
+}
+
+.onboarding-form__input,
+.onboarding-form__select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.onboarding-form__input:focus,
+.onboarding-form__select:focus,
+.onboarding-form__radio:focus,
+.onboarding-form__checkbox:focus,
+.onboarding-form__submit:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.onboarding-form__input[aria-invalid='true'],
+.onboarding-form__select[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.onboarding-form__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.onboarding-form__radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.onboarding-form__radio-option label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.onboarding-form__checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.onboarding-form__checkbox-row label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.onboarding-form__error {
+  margin: 0.375rem 0 0;
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
+.onboarding-form__submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.onboarding-form__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (min-width: 480px) {
+  .onboarding-form__radio-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
